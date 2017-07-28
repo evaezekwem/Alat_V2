@@ -157,8 +157,10 @@ class GetStartedLoginController: UIViewController {
     }
     
     func handleStart() {
+        let registrationController = RegistrationController()
         
-        print("start")
+        present(registrationController, animated: true, completion: nil)
+        
     }
     
     func setupBackgroundImageView() {
@@ -210,7 +212,7 @@ class GetStartedLoginController: UIViewController {
     func setupCountryCodeTextView() {
         countryCodeTextView.anchorWithConstantsToTop(top: descriptionText.topAnchor, left: textAndButtonContainer.leftAnchor, bottom: nil, right: nil, topConstant: 100, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
         countryCodeTextView.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        countryCodeTextView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        countryCodeTextView.heightAnchor.constraint(equalToConstant: 31).isActive = true
         
     }
     
@@ -222,14 +224,14 @@ class GetStartedLoginController: UIViewController {
     }
     
     func setupUserInputTextField() {
-        userInputTextField.anchorWithConstantsToTop(top: descriptionText.topAnchor, left: countryCodeTextView.rightAnchor, bottom: nil, right: nil, topConstant: 108, leftConstant: 5, bottomConstant: 0, rightConstant: 0)
+        userInputTextField.anchorWithConstantsToTop(top: descriptionText.topAnchor, left: countryCodeTextView.rightAnchor, bottom: nil, right: nil, topConstant: 107, leftConstant: 5, bottomConstant: 0, rightConstant: 0)
         userInputTextField.widthAnchor.constraint(equalTo: textAndButtonContainer.widthAnchor, multiplier: 0.7).isActive = true
         userInputTextField.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
     }
     
     func setupPhoneNumberSeparatorView() {
-        phoneNumberSeparatorView.anchorWithConstantsToTop(top: userInputTextField.bottomAnchor, left: countryCodeSeparatorView.rightAnchor, bottom: nil, right: nil, topConstant: 7, leftConstant: 5, bottomConstant: 0, rightConstant: 0)
+        phoneNumberSeparatorView.anchorWithConstantsToTop(top: userInputTextField.bottomAnchor, left: countryCodeSeparatorView.rightAnchor, bottom: nil, right: nil, topConstant: 9, leftConstant: 5, bottomConstant: 0, rightConstant: 0)
         phoneNumberSeparatorView.widthAnchor.constraint(equalTo: userInputTextField.widthAnchor).isActive = true
         phoneNumberSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         

@@ -75,7 +75,7 @@ class ViewController: UIViewController {
     
     func handleSignUp() {
         let getStartedLoginController = GetStartedLoginController()
-        present(getStartedLoginController, animated: true, completion: nil)
+        present(getStartedLoginController, animated: false , completion: nil)
     }
 
     override func viewDidLoad() {
