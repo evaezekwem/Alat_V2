@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6520CFD1F2BAF8F00D62E09 /* RegistrationController+Components+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Components+Handlers.swift */; };
+		A6520CFD1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */; };
 		A69563FC1F28CDB300D312BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69563FB1F28CDB300D312BA /* AppDelegate.swift */; };
 		A69563FE1F28CDB300D312BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69563FD1F28CDB300D312BA /* ViewController.swift */; };
 		A69564011F28CDB300D312BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69563FF1F28CDB300D312BA /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Components+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationController+Components+Handlers.swift"; sourceTree = "<group>"; };
+		A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationController+Setups+Handlers.swift"; sourceTree = "<group>"; };
 		A69563F81F28CDB300D312BA /* Alat_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alat_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69563FB1F28CDB300D312BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A69563FD1F28CDB300D312BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 				A69563FD1F28CDB300D312BA /* ViewController.swift */,
 				A695640F1F28FA7D00D312BA /* GetStartedLoginController.swift */,
 				A69564151F29462000D312BA /* RegistrationController.swift */,
-				A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Components+Handlers.swift */,
+				A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 			files = (
 				A69563FE1F28CDB300D312BA /* ViewController.swift in Sources */,
 				A69563FC1F28CDB300D312BA /* AppDelegate.swift in Sources */,
-				A6520CFD1F2BAF8F00D62E09 /* RegistrationController+Components+Handlers.swift in Sources */,
+				A6520CFD1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift in Sources */,
 				A69564161F29462000D312BA /* RegistrationController.swift in Sources */,
 				A69564101F28FA7D00D312BA /* GetStartedLoginController.swift in Sources */,
 			);
