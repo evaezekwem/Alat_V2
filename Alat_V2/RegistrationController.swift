@@ -8,15 +8,20 @@
 
 import UIKit
 
+let textAndBackgroundRed: UIColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+let textGray: UIColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+let otherComponentsRed: UIColor = UIColor(red: 128/255, green: 0/255, blue: 0/255, alpha: 1)
+
 class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     let securityQuestions = ["1. Security Question 1","2. Security Question 2","3. Security Question 3","3. Security Question 3","4. Security Question 4","5. Security Question 5"]
+    
 
 //      MARK: NavBar Items
     let navBarContainer: UIView = {
        let view = UIView()
-        view.backgroundColor = .yellow
         return view
+
     }()
     
     
@@ -186,7 +191,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         label.text = "Identification"
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 22)
-        label.textColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        label.textColor = textAndBackgroundRed
         return label
     }()
     
@@ -203,14 +208,14 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
        let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Enter your 14 digits BVN"
-        textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        textField.textColor = textGray
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
     
     let userBVNSeparator: UIView = {
         let view = UIView()
-         view.backgroundColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+         view.backgroundColor = textAndBackgroundRed
         return view
     }()
 
@@ -218,7 +223,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     lazy var cantRememberBVNButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("I can't remember my BVN", for: .normal)
-        button.setTitleColor(UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1), for: .normal)
+        button.setTitleColor(textAndBackgroundRed, for: .normal)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.addTarget(self, action: #selector(handleCantRememberBVN), for: .touchUpInside)
         return button
@@ -229,7 +234,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Select your date of Birth"
-        textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        textField.textColor = textGray
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
@@ -290,7 +295,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         label.text = "Registration"
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 22)
-        label.textColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        label.textColor = textAndBackgroundRed
         return label
     }()
     
@@ -298,14 +303,14 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Email address"
-        textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        textField.textColor = textGray
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
     
     let emailSeparator: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        view.backgroundColor = textAndBackgroundRed
         return view
     }()
     
@@ -314,14 +319,14 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
-        textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        textField.textColor = textGray
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
     
     let passwordSeparator: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        view.backgroundColor = textAndBackgroundRed
         return view
     }()
 
@@ -331,14 +336,14 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Confirm Password"
         textField.isSecureTextEntry = true
-        textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        textField.textColor = textGray
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
     
     let confirmPasswordSeparator: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        view.backgroundColor = textAndBackgroundRed
         return view
     }()
 
@@ -347,7 +352,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Security Question"
-        textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        textField.textColor = textGray
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
@@ -376,7 +381,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     
     let securityQuestionSeparator: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        view.backgroundColor = textAndBackgroundRed
         return view
     }()
 
@@ -385,20 +390,20 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Answer to Security Question"
-        textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        textField.textColor = textGray
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
     
     let securityAnswerSeparator: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        view.backgroundColor = textAndBackgroundRed
         return view
     }()
     
     lazy var centerNavNextButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(red: 128/255, green: 0/255, blue: 0/255, alpha: 1)
+        button.backgroundColor = otherComponentsRed
         button.setTitle("Next", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
@@ -427,7 +432,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         label.text = "Login"
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 22)
-        label.textColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        label.textColor = textAndBackgroundRed
         return label
     }()
     
@@ -435,14 +440,14 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Email address"
-        textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        textField.textColor = textGray
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
     
     let rightNavEmailSeparator: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        view.backgroundColor = textAndBackgroundRed
         return view
     }()
     
@@ -451,7 +456,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
-        textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        textField.textColor = textGray
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
@@ -460,13 +465,13 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     
     let rightNavPasswordSeparator: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+        view.backgroundColor = textAndBackgroundRed
         return view
     }()
     
     lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(red: 128/255, green: 0/255, blue: 0/255, alpha: 1)
+        button.backgroundColor = otherComponentsRed
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)

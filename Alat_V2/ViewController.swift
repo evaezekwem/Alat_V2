@@ -68,8 +68,8 @@ class ViewController: UIViewController {
     }()
     
     func handleLogin() {
-        print("login press")
-        
+        let fundAccountController = FundAccountController()
+        present(fundAccountController, animated: true, completion: nil)
     }
     
     
@@ -165,6 +165,18 @@ class ViewController: UIViewController {
 
 //Extends UIView class allows to easily specify constraints by calling either of the functions.
 public extension UIView {
+    
+    func textAndBackgroundRed() -> UIColor {
+        return UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+    }
+    
+    func textGray() -> UIColor {
+        return UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+    }
+    
+    func otherComponentRed() -> UIColor {
+        return UIColor(red: 128/255, green: 0/255, blue: 0/255, alpha: 1)
+    }
     
     func anchorToTop(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil) {
         

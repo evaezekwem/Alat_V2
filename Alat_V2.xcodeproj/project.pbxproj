@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A625E9D21F2E693900E89313 /* FundAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625E9D11F2E693900E89313 /* FundAccountController.swift */; };
 		A6520CFD1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */; };
 		A69563FC1F28CDB300D312BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69563FB1F28CDB300D312BA /* AppDelegate.swift */; };
 		A69563FE1F28CDB300D312BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69563FD1F28CDB300D312BA /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A625E9D11F2E693900E89313 /* FundAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundAccountController.swift; sourceTree = "<group>"; };
 		A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationController+Setups+Handlers.swift"; sourceTree = "<group>"; };
 		A69563F81F28CDB300D312BA /* Alat_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alat_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69563FB1F28CDB300D312BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A625E9D31F2E722E00E89313 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
 		A69563EF1F28CDB300D312BA = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +69,7 @@
 		A69563FA1F28CDB300D312BA /* Alat_V2 */ = {
 			isa = PBXGroup;
 			children = (
+				A625E9D31F2E722E00E89313 /* helpers */,
 				A69564141F2945D500D312BA /* Controller */,
 				A69563FF1F28CDB300D312BA /* Main.storyboard */,
 				A69564021F28CDB300D312BA /* Assets.xcassets */,
@@ -77,6 +87,7 @@
 				A695640F1F28FA7D00D312BA /* GetStartedLoginController.swift */,
 				A69564151F29462000D312BA /* RegistrationController.swift */,
 				A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */,
+				A625E9D11F2E693900E89313 /* FundAccountController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -154,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A625E9D21F2E693900E89313 /* FundAccountController.swift in Sources */,
 				A69563FE1F28CDB300D312BA /* ViewController.swift in Sources */,
 				A69563FC1F28CDB300D312BA /* AppDelegate.swift in Sources */,
 				A6520CFD1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift in Sources */,
