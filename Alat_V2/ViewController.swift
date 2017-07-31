@@ -68,8 +68,11 @@ class ViewController: UIViewController {
     }()
     
     func handleLogin() {
-        let fundAccountController = FundAccountController()
-        present(fundAccountController, animated: true, completion: nil)
+        let accountOverviewController = AccountOverviewController()
+        present(accountOverviewController, animated: false, completion: nil)
+        
+//        let fundAccountController = FundAccountController()
+//        present(fundAccountController, animated: true, completion: nil)
     }
     
     
