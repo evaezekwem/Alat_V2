@@ -87,6 +87,9 @@ extension RegistrationController {
     
     
     func handleLogin() {
+        let accountOverviewController = AccountOverviewController()
+        present(accountOverviewController, animated: false, completion: nil)
+
         print("login clicked")
     }
 

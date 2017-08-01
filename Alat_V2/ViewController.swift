@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         let button = UIButton(type: .system)
         button.backgroundColor = .white
         button.setTitle("Sign Up", for: .normal)
-        button.setTitleColor(.red , for: .normal)
+        button.setTitleColor(textAndBackgroundRed , for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.layer.cornerRadius = 7.5
         button.layer.masksToBounds = true
@@ -68,11 +68,8 @@ class ViewController: UIViewController {
     }()
     
     func handleLogin() {
-        let accountOverviewController = AccountOverviewController()
-        present(accountOverviewController, animated: false, completion: nil)
-        
-//        let fundAccountController = FundAccountController()
-//        present(fundAccountController, animated: true, completion: nil)
+        let loginController = LoginController()
+        present(loginController, animated: false, completion: nil)
     }
     
     

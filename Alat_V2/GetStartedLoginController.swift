@@ -48,9 +48,8 @@ class GetStartedLoginController: UIViewController {
        let text = UITextView()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = "Let's get started..."
-        //text.font = UIFont.systemFont(ofSize: 36)
-        text.font = UIFont.init(name: "Helvetica Neue", size: 38)
-       
+        text.font = UIFont.systemFont(ofSize: 38)
+        
         text.isEditable = false
         text.backgroundColor = nil
         text.textColor = .white
@@ -85,7 +84,6 @@ class GetStartedLoginController: UIViewController {
     let countryCodeSeparatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
         view.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 0.7)
        return view
     }()
@@ -113,7 +111,7 @@ class GetStartedLoginController: UIViewController {
         let button = UIButton(type: .system)
         button.backgroundColor = .white
         button.setTitle("Start", for: .normal)
-        button.setTitleColor(.red , for: .normal)
+        button.setTitleColor(textAndBackgroundRed , for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.layer.cornerRadius = 7.5
         button.layer.masksToBounds = true
