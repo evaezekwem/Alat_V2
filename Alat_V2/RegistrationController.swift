@@ -9,6 +9,7 @@
 import UIKit
 
 let textAndBackgroundRed: UIColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
+let textAndBackgroundLightRed: UIColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 0.5)
 let textGray: UIColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
 let otherComponentsRed: UIColor = UIColor(red: 128/255, green: 0/255, blue: 0/255, alpha: 1)
 

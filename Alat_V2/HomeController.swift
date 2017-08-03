@@ -38,6 +38,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     
     func handleSearchPressed(){
+        let profileVC = ProfileVC()
+        
+        present(profileVC, animated: false, completion: nil)
+        
         print("Profile Image Clicked")
     }
     
