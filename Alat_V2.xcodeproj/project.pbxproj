@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A61204D41F2F480000221B77 /* AccountOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61204D31F2F480000221B77 /* AccountOverviewController.swift */; };
 		A61204D61F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61204D51F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift */; };
 		A61204D81F2FFC4500221B77 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61204D71F2FFC4500221B77 /* LoginController.swift */; };
 		A625E9D21F2E693900E89313 /* FundAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625E9D11F2E693900E89313 /* FundAccountController.swift */; };
@@ -19,10 +18,18 @@
 		A69564061F28CDB300D312BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69564041F28CDB300D312BA /* LaunchScreen.storyboard */; };
 		A69564101F28FA7D00D312BA /* GetStartedLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A695640F1F28FA7D00D312BA /* GetStartedLoginController.swift */; };
 		A69564161F29462000D312BA /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69564151F29462000D312BA /* RegistrationController.swift */; };
+		A6CC79241F31CD2F00601DC8 /* AccountOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79231F31CD2F00601DC8 /* AccountOverviewController.swift */; };
+		A6CC79261F31D92B00601DC8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79251F31D92B00601DC8 /* HomeController.swift */; };
+		A6CC79291F31D9A700601DC8 /* DLHamburguerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79271F31D9A700601DC8 /* DLHamburguerNavigationController.swift */; };
+		A6CC792A1F31D9A700601DC8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79281F31D9A700601DC8 /* Utilities.swift */; };
+		A6CC792C1F31DA5B00601DC8 /* DLHamburguerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC792B1F31DA5B00601DC8 /* DLHamburguerViewController.swift */; };
+		A6CC792E1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC792D1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift */; };
+		A6CC79321F3225F400601DC8 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79301F3225F400601DC8 /* SideMenuVC.swift */; };
+		A6CC79331F3225F400601DC8 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79311F3225F400601DC8 /* RootVC.swift */; };
+		A6CC79351F32260300601DC8 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79341F32260300601DC8 /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A61204D31F2F480000221B77 /* AccountOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountOverviewController.swift; path = ../AccountOverviewController.swift; sourceTree = "<group>"; };
 		A61204D51F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountOverview+setups+handlers.swift"; sourceTree = "<group>"; };
 		A61204D71F2FFC4500221B77 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A625E9D11F2E693900E89313 /* FundAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundAccountController.swift; sourceTree = "<group>"; };
@@ -36,6 +43,15 @@
 		A69564071F28CDB300D312BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A695640F1F28FA7D00D312BA /* GetStartedLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedLoginController.swift; sourceTree = "<group>"; };
 		A69564151F29462000D312BA /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		A6CC79231F31CD2F00601DC8 /* AccountOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOverviewController.swift; sourceTree = "<group>"; };
+		A6CC79251F31D92B00601DC8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		A6CC79271F31D9A700601DC8 /* DLHamburguerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerNavigationController.swift; sourceTree = "<group>"; };
+		A6CC79281F31D9A700601DC8 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		A6CC792B1F31DA5B00601DC8 /* DLHamburguerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerViewController.swift; sourceTree = "<group>"; };
+		A6CC792D1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerContainerViewController.swift; sourceTree = "<group>"; };
+		A6CC79301F3225F400601DC8 /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		A6CC79311F3225F400601DC8 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		A6CC79341F32260300601DC8 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +110,27 @@
 				A69564151F29462000D312BA /* RegistrationController.swift */,
 				A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */,
 				A625E9D11F2E693900E89313 /* FundAccountController.swift */,
-				A61204D71F2FFC4500221B77 /* LoginController.swift */,
-				A61204D31F2F480000221B77 /* AccountOverviewController.swift */,
 				A61204D51F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift */,
+				A6CC79231F31CD2F00601DC8 /* AccountOverviewController.swift */,
+				A6CC792F1F3225AA00601DC8 /* gtbranch */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		A6CC792F1F3225AA00601DC8 /* gtbranch */ = {
+			isa = PBXGroup;
+			children = (
+				A61204D71F2FFC4500221B77 /* LoginController.swift */,
+				A6CC792D1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift */,
+				A6CC79271F31D9A700601DC8 /* DLHamburguerNavigationController.swift */,
+				A6CC792B1F31DA5B00601DC8 /* DLHamburguerViewController.swift */,
+				A6CC79281F31D9A700601DC8 /* Utilities.swift */,
+				A6CC79301F3225F400601DC8 /* SideMenuVC.swift */,
+				A6CC79311F3225F400601DC8 /* RootVC.swift */,
+				A6CC79251F31D92B00601DC8 /* HomeController.swift */,
+				A6CC79341F32260300601DC8 /* ProfileVC.swift */,
+			);
+			name = gtbranch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,14 +207,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A625E9D21F2E693900E89313 /* FundAccountController.swift in Sources */,
-				A61204D41F2F480000221B77 /* AccountOverviewController.swift in Sources */,
 				A69563FE1F28CDB300D312BA /* ViewController.swift in Sources */,
 				A69563FC1F28CDB300D312BA /* AppDelegate.swift in Sources */,
 				A61204D81F2FFC4500221B77 /* LoginController.swift in Sources */,
+				A6CC79331F3225F400601DC8 /* RootVC.swift in Sources */,
+				A6CC792E1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift in Sources */,
+				A6CC792C1F31DA5B00601DC8 /* DLHamburguerViewController.swift in Sources */,
+				A6CC79261F31D92B00601DC8 /* HomeController.swift in Sources */,
 				A6520CFD1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift in Sources */,
+				A6CC792A1F31D9A700601DC8 /* Utilities.swift in Sources */,
+				A6CC79241F31CD2F00601DC8 /* AccountOverviewController.swift in Sources */,
 				A69564161F29462000D312BA /* RegistrationController.swift in Sources */,
 				A69564101F28FA7D00D312BA /* GetStartedLoginController.swift in Sources */,
+				A6CC79351F32260300601DC8 /* ProfileVC.swift in Sources */,
+				A6CC79291F31D9A700601DC8 /* DLHamburguerNavigationController.swift in Sources */,
 				A61204D61F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift in Sources */,
+				A6CC79321F3225F400601DC8 /* SideMenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

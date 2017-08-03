@@ -118,6 +118,11 @@ class LoginController : UIViewController{
     }()
     
     func handleLogin() {
+        let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
+        let contentController = UINavigationController(rootViewController: homeController)
+        
+        present(contentController, animated: false, completion: nil)
+        
         print("Login clicked")
     }
 
