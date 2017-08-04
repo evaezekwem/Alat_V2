@@ -68,6 +68,10 @@
 		A625E9D31F2E722E00E89313 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A6CC79281F31D9A700601DC8 /* Utilities.swift */,
+				A6CC792D1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift */,
+				A6CC79271F31D9A700601DC8 /* DLHamburguerNavigationController.swift */,
+				A6CC792B1F31DA5B00601DC8 /* DLHamburguerViewController.swift */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -112,6 +116,9 @@
 				A625E9D11F2E693900E89313 /* FundAccountController.swift */,
 				A61204D51F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift */,
 				A6CC79231F31CD2F00601DC8 /* AccountOverviewController.swift */,
+				A61204D71F2FFC4500221B77 /* LoginController.swift */,
+				A6CC79251F31D92B00601DC8 /* HomeController.swift */,
+				A6CC79341F32260300601DC8 /* ProfileVC.swift */,
 				A6CC792F1F3225AA00601DC8 /* gtbranch */,
 			);
 			name = Controller;
@@ -120,15 +127,8 @@
 		A6CC792F1F3225AA00601DC8 /* gtbranch */ = {
 			isa = PBXGroup;
 			children = (
-				A61204D71F2FFC4500221B77 /* LoginController.swift */,
-				A6CC792D1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift */,
-				A6CC79271F31D9A700601DC8 /* DLHamburguerNavigationController.swift */,
-				A6CC792B1F31DA5B00601DC8 /* DLHamburguerViewController.swift */,
-				A6CC79281F31D9A700601DC8 /* Utilities.swift */,
 				A6CC79301F3225F400601DC8 /* SideMenuVC.swift */,
 				A6CC79311F3225F400601DC8 /* RootVC.swift */,
-				A6CC79251F31D92B00601DC8 /* HomeController.swift */,
-				A6CC79341F32260300601DC8 /* ProfileVC.swift */,
 			);
 			name = gtbranch;
 			sourceTree = "<group>";

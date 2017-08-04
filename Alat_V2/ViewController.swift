@@ -68,8 +68,17 @@ class ViewController: UIViewController {
     }()
     
     func handleLogin() {
-        let loginController = LoginController()
-        present(loginController, animated: false, completion: nil)
+        let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
+        let contentController = UINavigationController(rootViewController: homeController)
+        let menuVC = SideMenuVC(collectionViewLayout: UICollectionViewFlowLayout())
+        let rootViewController = RootVC(contentViewController: contentController, menuViewController: menuVC)
+        
+        present(rootViewController, animated: false, completion: nil)
+        
+        
+        
+//        let loginController = LoginController()
+//        present(loginController, animated: false, completion: nil)
     }
     
     

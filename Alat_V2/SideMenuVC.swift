@@ -13,7 +13,8 @@ class SideMenuVC : UICollectionViewController, UICollectionViewDelegateFlowLayou
 
     
     
-    var sections = ["Add Card","My Cards","Change Password","Report a Problem","Rate us", "Anything"]
+    var sections = ["Fund Account","Transfer Money","Make Payment","Goals","Refer Friends", "Settings"]
+    let icons: [UIImage] = [UIImage(named: "fund_account_icon")!, UIImage(named: "transfer_money_icon")!,UIImage(named: "make_payment_icon")!,UIImage(named: "goals_icon")!,UIImage(named: "refer_friends_icon")!,UIImage(named: "settings_icon")!]
     
     let segues = [["addCardController", "myCardsController", "changePasswordController"], ["ReportProblemController", "rateUsController", "settingsController", "aboutUsController"], ["shareController", "helpController", "logoutController"]]
     
@@ -44,7 +45,8 @@ class SideMenuVC : UICollectionViewController, UICollectionViewDelegateFlowLayou
         
         
         cell.menuLabel.text = sections[indexPath.row]
-        
+        cell.menuIcon.image = icons[indexPath.row]
+       // cell.heightAnchor.constraint(equalToConstant: 16).isActive = true
         return cell
         
     }
@@ -56,7 +58,7 @@ class SideMenuVC : UICollectionViewController, UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 64)
+        return CGSize(width: view.frame.width, height: 46.5)
     }
     
     
@@ -75,11 +77,18 @@ class SideMenuVC : UICollectionViewController, UICollectionViewDelegateFlowLayou
             return CGSize(width: view.frame.width, height: 0)
         }
     }
+    
+    
 
     func mainNavigationController() -> DLHamburguerNavigationController {
         return DLHamburguerNavigationController(rootViewController: HomeController(collectionViewLayout : UICollectionViewFlowLayout()))
 
     }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+
 
 }
 
@@ -101,7 +110,7 @@ class MenuCell : UICollectionViewCell{
 
     let menuIcon : UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "phone")?.withRenderingMode(.alwaysTemplate)
+//        iv.image = UIImage(named: "phone")?.withRenderingMode(.alwaysTemplate)
         iv.tintColor = Utilities.getColorWithHexString("#8A8B8A")
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -111,7 +120,7 @@ class MenuCell : UICollectionViewCell{
         let label = UILabel()
         label.text = ""
         label.textColor = Utilities.getColorWithHexString("#8A8B8A")
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 10)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -131,9 +140,9 @@ class MenuCell : UICollectionViewCell{
 
         
         menuIcon.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        menuIcon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 36).isActive = true
-        menuIcon.widthAnchor.constraint(equalToConstant: 24).isActive = true
-        menuIcon.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        menuIcon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 24).isActive = true
+        menuIcon.widthAnchor.constraint(equalToConstant: 18).isActive = true
+        menuIcon.heightAnchor.constraint(equalToConstant: 18).isActive = true
         
         
         menuLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
@@ -145,7 +154,7 @@ class MenuCell : UICollectionViewCell{
         divider.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         divider.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         divider.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        divider.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        divider.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
     
     }
 
@@ -166,7 +175,7 @@ class ProfileMenuHeader : UICollectionViewCell {
     let profileImage : UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "avatar")
-        iv.layer.cornerRadius = 32
+        iv.layer.cornerRadius = 24
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.backgroundColor = .red
@@ -178,8 +187,8 @@ class ProfileMenuHeader : UICollectionViewCell {
     
     let lastSeen : UILabel = {
         let label = UILabel()
-        label.text = "last seen : 30th of October 2015"
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.text = "last login 4th August 2017 1:13am"
+        label.font = UIFont.systemFont(ofSize: 8)
         label.textColor = Utilities.getColorWithHexString("#8A8B8A")
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -187,9 +196,9 @@ class ProfileMenuHeader : UICollectionViewCell {
     
     let profileName : UILabel = {
         let label = UILabel()
-        label.text = "Nigga Man"
+        label.text = "Ayo Freeborn"
         label.textColor = Utilities.getColorWithHexString("#8A8B8A")
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.systemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -215,17 +224,17 @@ class ProfileMenuHeader : UICollectionViewCell {
 
         
         
-        profileImage.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        profileImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive = true
         profileImage.leftAnchor.constraint(equalTo: leftAnchor, constant: 24).isActive = true
-        profileImage.widthAnchor.constraint(equalToConstant: 64).isActive = true
-        profileImage.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        profileImage.widthAnchor.constraint(equalToConstant: 48).isActive = true
+        profileImage.heightAnchor.constraint(equalToConstant: 48).isActive = true
         
-        profileName.topAnchor.constraint(equalTo: profileImage.topAnchor, constant: 16).isActive = true
+        profileName.topAnchor.constraint(equalTo: profileImage.topAnchor, constant: 8).isActive = true
         profileName.leftAnchor.constraint(equalTo: profileImage.rightAnchor, constant: 8).isActive = true
         profileName.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 2/3).isActive = true
-        profileName.heightAnchor.constraint(equalToConstant: 26).isActive = true
+        //profileName.heightAnchor.constraint(equalToConstant: 26).isActive = true
         
-        lastSeen.topAnchor.constraint(equalTo: profileName.bottomAnchor, constant: 2).isActive = true
+        lastSeen.topAnchor.constraint(equalTo: profileName.bottomAnchor).isActive = true
         lastSeen.leftAnchor.constraint(equalTo: profileName.leftAnchor).isActive = true
         lastSeen.rightAnchor.constraint(equalTo: profileName.rightAnchor).isActive = true
         lastSeen.heightAnchor.constraint(equalToConstant: 14).isActive = true
@@ -233,10 +242,11 @@ class ProfileMenuHeader : UICollectionViewCell {
         divider.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         divider.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         divider.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        divider.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        divider.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
        
         
         
     }
+    
     
 }

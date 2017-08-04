@@ -14,7 +14,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.backgroundColor = .white
         let contactImage = UIImage(named: "identityIcon")?.withRenderingMode(.alwaysOriginal)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: contactImage, style: .plain, target: self, action: #selector(handleSearchPressed))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: contactImage, style: .plain, target: self, action: #selector(handleProfileIconClicked))
         
         let menuImage = UIImage(named: "menu_icon")?.withRenderingMode(.alwaysOriginal)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuImage, style: .plain, target: self, action: #selector(handleMenuPressed))
@@ -37,7 +37,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
 
     
-    func handleSearchPressed(){
+    func handleProfileIconClicked(){
         let profileVC = ProfileVC()
         
         present(profileVC, animated: false, completion: nil)
@@ -48,6 +48,16 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func handleMenuPressed(){
         
         self.findHamburguerViewController()?.showMenuViewController()
+
+        
+//        
+//        let homeController = AccountOverviewController()
+//        let contentController = UINavigationController(rootViewController: homeController)
+//        let menuVC = SideMenuVC(collectionViewLayout: UICollectionViewLayout())
+//        let rootViewController = RootVC(contentViewController: contentController, menuViewController: menuVC)
+//        
+//        present(rootViewController, animated: true, completion: nil)
+        
         print("Menu clicked")
     }
     
