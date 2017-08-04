@@ -87,10 +87,15 @@ extension RegistrationController {
     
     
     func handleLogin() {
-        let accountOverviewController = AccountOverviewController()
-        present(accountOverviewController, animated: false, completion: nil)
+        
+        let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
+        let contentController = UINavigationController(rootViewController: homeController)
+        let menuVC = SideMenuVC(collectionViewLayout: UICollectionViewFlowLayout())
+        let rootViewController = RootVC(contentViewController: contentController, menuViewController: menuVC)
+        
+        present(rootViewController, animated: false, completion: nil)
 
-        print("login clicked")
+        
     }
 
     
