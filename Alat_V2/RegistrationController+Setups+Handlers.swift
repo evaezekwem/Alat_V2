@@ -10,7 +10,7 @@ import UIKit
 
 extension RegistrationController {
     
-//      MARK: ACTION HANDLERS
+    //      MARK: ACTION HANDLERS
     
     //Handlers for NavBar components
     func handleBack() {
@@ -35,7 +35,7 @@ extension RegistrationController {
         rightNavBarCircleImageView.image = UIImage(named: "right-navbarImage-white")
         
     }
-
+    
     func handleCenterNavCircleClicked() {
         containerForItemsControlledByCenterNavBarCircle.isHidden = false
         containerForItemsControlledByLeftNavBarCircle.isHidden = true
@@ -54,7 +54,7 @@ extension RegistrationController {
         rightNavBarCircleImageView.image = UIImage(named: "right-navbarImage-white")
         
     }
-
+    
     func handleRightNavCircleClicked() {
         containerForItemsControlledByRightNavBarCircle.isHidden = false
         containerForItemsControlledByLeftNavBarCircle.isHidden = true
@@ -80,7 +80,7 @@ extension RegistrationController {
     func handleSkipBVN(){
         print("skip button pressed")
     }
-
+    
     func handleCantRememberBVN() {
         print("forgot my bvn")
     }
@@ -94,10 +94,10 @@ extension RegistrationController {
         let rootViewController = RootVC(contentViewController: contentController, menuViewController: menuVC)
         
         present(rootViewController, animated: false, completion: nil)
-
+        
         
     }
-
+    
     
     func handleCenterNavNext() {
         handleRightNavCircleClicked()
@@ -164,7 +164,7 @@ extension RegistrationController {
     
     
     
-//      MARK: SETTING AUTOLAYOUT CONSTRAINTS
+    //      MARK: SETTING AUTOLAYOUT CONSTRAINTS
     
     //Adding constraints for NavBar
     func setupNavBarContainer() {
@@ -252,7 +252,7 @@ extension RegistrationController {
     }
     
     
-//      MARK: Adding constraint for individual containers
+    //      MARK: Adding constraint for individual containers
     
     func setupContainerForAllControlledElements() {
         containerForAllControlledElements.anchorToTop(top: navBarContainer.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
@@ -272,7 +272,7 @@ extension RegistrationController {
     }
     
     
-//      MARK: Adding constraints to items in the container controlled by leftNavBarCircle
+    //      MARK: Adding constraints to items in the container controlled by leftNavBarCircle
     func setupLeftNavBarUserInputContainer() {
         leftNavBarUserInputContainer.centerXAnchor.constraint(equalTo: containerForItemsControlledByLeftNavBarCircle.centerXAnchor).isActive = true
         leftNavBarUserInputContainer.centerYAnchor.constraint(equalTo: containerForItemsControlledByLeftNavBarCircle.centerYAnchor, constant: -35).isActive = true
@@ -324,9 +324,9 @@ extension RegistrationController {
         nextButton.widthAnchor.constraint(equalTo: containerForItemsControlledByLeftNavBarCircle.widthAnchor, constant: -70).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
- 
     
-//      MARK: Adding constraints to items in the container controlled by centerNavBarCircle
+    
+    //      MARK: Adding constraints to items in the container controlled by centerNavBarCircle
     func setupScrollView() {
         
         scrollView.anchorToTop(top: containerForItemsControlledByCenterNavBarCircle.topAnchor, left: containerForItemsControlledByCenterNavBarCircle.leftAnchor, bottom: nil, right: containerForItemsControlledByCenterNavBarCircle.rightAnchor)
@@ -413,7 +413,7 @@ extension RegistrationController {
     }
     
     
-//      MARK: Adding constraints to items in the container controlled by rightNavBarCircle
+    //      MARK: Adding constraints to items in the container controlled by rightNavBarCircle
     func setupRightNavBarUserInputContainer() {
         rightNavBarUserInputContainer.centerXAnchor.constraint(equalTo: containerForItemsControlledByRightNavBarCircle.centerXAnchor).isActive = true
         rightNavBarUserInputContainer.centerYAnchor.constraint(equalTo: containerForItemsControlledByRightNavBarCircle.centerYAnchor, constant: -35).isActive = true
@@ -458,6 +458,6 @@ extension RegistrationController {
         loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
     }
-
-
+    
+    
 }

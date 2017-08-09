@@ -9,8 +9,8 @@
 import UIKit
 
 class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
-//      MARK: NavBar Items
+    
+    //      MARK: NavBar Items
     let navBarContainer: UIView = {
         let view = UIView()
         return view
@@ -33,7 +33,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }()
     
     let fundAccountText: UILabel = {
-       let text = UILabel()
+        let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = "Fund Account"
         text.font = UIFont.systemFont(ofSize: 14)
@@ -59,16 +59,16 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         text.textAlignment = NSTextAlignment.left
         return text
     }()
-
+    
     let leftBalanceText: UILabel = {
         let text = UILabel()
         text.text = "N 00."
         text.font = UIFont.systemFont(ofSize: 34)
         text.textColor = .white
         text.textAlignment = NSTextAlignment.left
-       return text
+        return text
     }()
-
+    
     let rightBalanceText: UILabel = {
         let text = UILabel()
         text.text = "00"
@@ -77,9 +77,9 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         text.textAlignment = NSTextAlignment.left
         return text
     }()
-   
     
-//      MARK: Creating container for controller tabs
+    
+    //      MARK: Creating container for controller tabs
     let containerForSquareTabs: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -107,7 +107,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCenterSquareClicked)))
         return view
     }()
-
+    
     lazy var rightNavBarSquare: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -117,10 +117,10 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleRightSquareClicked)))
         return view
     }()
-
-
     
-//      MARK: Creating individual controlled containers
+    
+    
+    //      MARK: Creating individual controlled containers
     let containerForAllControlledElements: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -130,7 +130,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     let containerForItemsControlledByLeftNavBarSquare: UIView = {
         let view = UIView()
-//        view.backgroundColor = .red
+        //        view.backgroundColor = .red
         return view
     }()
     
@@ -151,7 +151,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
     let leftNavBarUserInputContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-//        view.backgroundColor = .red
+        //        view.backgroundColor = .red
         return view
     }()
     
@@ -163,8 +163,8 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         text.textAlignment = NSTextAlignment.left
         return text
     }()
-
-
+    
+    
     let amountInputTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -175,7 +175,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         textField.layer.cornerRadius = 5
         return textField
     }()
-
+    
     let sourceText: UILabel = {
         let text = UILabel()
         text.text = "Source"
@@ -196,7 +196,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         textField.layer.cornerRadius = 5
         return textField
     }()
-
+    
     lazy var sourcePicker: UIPickerView = {
         let picker = UIPickerView()
         picker.delegate = self
@@ -216,8 +216,8 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         button.addTarget(self, action: #selector(handleFund), for: .touchUpInside)
         return button
     }()
-
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -225,7 +225,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         //Adds the container for holding all navBar items to main view
         view.addSubview(navBarContainer)
         
-//      MARK: Adds all navBar items to the navBar container
+        //      MARK: Adds all navBar items to the navBar container
         navBarContainer.addSubview(backgroundImageView)
         navBarContainer.addSubview(backButton)
         navBarContainer.addSubview(fundAccountText)
@@ -248,16 +248,16 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         containerForAllControlledElements.addSubview(containerForItemsControlledByCenterNavBarSquare)
         containerForAllControlledElements.addSubview(containerForItemsControlledByRightNavBarSquare)
         
-//      MARK: Adds all components controlled by leftNavBarSquare to appropriate views
+        //      MARK: Adds all components controlled by leftNavBarSquare to appropriate views
         containerForItemsControlledByLeftNavBarSquare.addSubview(leftNavBarUserInputContainer)
         leftNavBarUserInputContainer.addSubview(amountText)
         leftNavBarUserInputContainer.addSubview(amountInputTextField)
         leftNavBarUserInputContainer.addSubview(sourceText)
         leftNavBarUserInputContainer.addSubview(sourcePickerTextField)
         containerForItemsControlledByLeftNavBarSquare.addSubview(fundButton)
-
-
-//      MARK: Calls autolayout functions for menu bar items
+        
+        
+        //      MARK: Calls autolayout functions for menu bar items
         setupNavBarContainer()
         setupBackgroundImageView()
         setupBackButton()
@@ -267,19 +267,19 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         setupLeftBalanceText()
         setupRightBalanceText()
         
-//      MARK: Calls autolayout functions for navBarSquares
+        //      MARK: Calls autolayout functions for navBarSquares
         setupContainerForSquareTabs()
         setupLeftNavBarSquare()
         setupCenterNavBarSquare()
         setupRightNavBarSquare()
         
-//      MARK: Calls autolayout functions for all view containers
+        //      MARK: Calls autolayout functions for all view containers
         setupContainerForAllControlledElements()
         setupContainerForItemsControlledByLeftNavBarSquare()
         setupContainerForItemsControlledByCenterNavBarSquare()
         setupContainerForItemsControlledByRightNavBarSquare()
         
-//      MARK: Calls autolayout functions for all components in containerForItemsControlledByLeftNavBarSquare
+        //      MARK: Calls autolayout functions for all components in containerForItemsControlledByLeftNavBarSquare
         setupLeftNavBarUserInputContainer()
         setupAmountText()
         setupAmountInputTextField()
@@ -289,7 +289,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         hideUneededSubviews()
     }
-
+    
     func handleFund() {
         print("fund clicked")
     }
@@ -337,8 +337,8 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         containerForItemsControlledByCenterNavBarSquare.isHidden = true
         containerForItemsControlledByRightNavBarSquare.isHidden = true
     }
-
-   
+    
+    
     //      MARK: SETTING AUTOLAYOUT CONSTRAINTS
     
     //Adding constraints for NavBar
@@ -384,10 +384,10 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     func setupRightBalanceText() {
         rightBalanceText.anchorWithConstantsToTop(top: nil, left: leftBalanceText.rightAnchor, bottom: navBarContainer.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 25, rightConstant: 0)
-
+        
     }
     
-//      MARK: Adding constraint for controller tabs
+    //      MARK: Adding constraint for controller tabs
     
     func setupContainerForSquareTabs() {
         containerForSquareTabs.anchorToTop(top: navBarContainer.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor)
@@ -417,7 +417,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         rightNavBarSquare.heightAnchor.constraint(equalTo: containerForSquareTabs.heightAnchor, constant: -30).isActive = true
     }
     
-//      MARK: Adding constraint for individual containers
+    //      MARK: Adding constraint for individual containers
     
     func setupContainerForAllControlledElements() {
         containerForAllControlledElements.anchorToTop(top: containerForSquareTabs.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
@@ -438,7 +438,7 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     
     
-//      MARK: Adding constraint for all components in containerForItemsControlledByLeftNavBarSquare    setupLeftNavBarUserInputContainer()
+    //      MARK: Adding constraint for all components in containerForItemsControlledByLeftNavBarSquare    setupLeftNavBarUserInputContainer()
     func setupLeftNavBarUserInputContainer() {
         leftNavBarUserInputContainer.centerXAnchor.constraint(equalTo: containerForItemsControlledByLeftNavBarSquare.centerXAnchor).isActive = true
         leftNavBarUserInputContainer.topAnchor.constraint(equalTo: containerForSquareTabs.bottomAnchor, constant: 20).isActive = true
@@ -473,10 +473,10 @@ class FundAccountController: UIViewController, UIPickerViewDelegate, UIPickerVie
         fundButton.widthAnchor.constraint(equalTo: leftNavBarUserInputContainer.widthAnchor).isActive = true
         fundButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
-
-
     
-//    let sourcesForFundingAccount = []
+    
+    
+    //    let sourcesForFundingAccount = []
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

@@ -17,12 +17,12 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     
     let securityQuestions = ["1. Security Question 1","2. Security Question 2","3. Security Question 3","3. Security Question 3","4. Security Question 4","5. Security Question 5"]
     
-
-//      MARK: NavBar Items
+    
+    //      MARK: NavBar Items
     let navBarContainer: UIView = {
-       let view = UIView()
+        let view = UIView()
         return view
-
+        
     }()
     
     
@@ -63,9 +63,9 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         imageView.layer.masksToBounds = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleLeftNavCircleClicked)))
         return imageView
-
+        
     }()
-
+    
     
     lazy var leftNavBarCircleImageView: UIImageView = {
         let imageView = UIImageView()
@@ -148,14 +148,14 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }()
     
     let connectingLineView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
         return view
     }()
     
     
-//      MARK: Creating individual containers
+    //      MARK: Creating individual containers
     let containerForAllControlledElements: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -163,10 +163,10 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }()
     
     let containerForItemsControlledByLeftNavBarCircle: UIView = {
-       let view = UIView()
+        let view = UIView()
         return view
     }()
-
+    
     let containerForItemsControlledByCenterNavBarCircle: UIView = {
         let view = UIView()
         return view
@@ -178,16 +178,16 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }()
     
     let leftNavBarUserInputContainer: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-       return view
+        return view
     }()
     
     
-//      MARK: Creating items controlled by left NavBarCircle
+    //      MARK: Creating items controlled by left NavBarCircle
     
     let titleTextLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Identification"
         label.textAlignment = .left
@@ -197,7 +197,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }()
     
     lazy var skipBVNButton: UIButton = {
-       let button = UIButton(type: .system)
+        let button = UIButton(type: .system)
         button.setTitle("Skip BVN", for: .normal)
         button.setTitleColor(.gray, for: .normal)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -206,7 +206,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }()
     
     let userBVNInputTextField: UITextField = {
-       let textField = UITextField()
+        let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Enter your 14 digits BVN"
         textField.textColor = textGray
@@ -216,10 +216,10 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     
     let userBVNSeparator: UIView = {
         let view = UIView()
-         view.backgroundColor = textAndBackgroundRed
+        view.backgroundColor = textAndBackgroundRed
         return view
     }()
-
+    
     
     lazy var cantRememberBVNButton: UIButton = {
         let button = UIButton(type: .system)
@@ -253,7 +253,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         view.backgroundColor = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
         return view
     }()
-
+    
     lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(red: 128/255, green: 0/255, blue: 0/255, alpha: 1)
@@ -268,10 +268,10 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }()
     
     
-//      MARK: Creating items controlled by center NavBarCircle
+    //      MARK: Creating items controlled by center NavBarCircle
     
     lazy var scrollView: UIScrollView = {
-       let scroll = UIScrollView()
+        let scroll = UIScrollView()
         scroll.translatesAutoresizingMaskIntoConstraints = false
         scroll.isScrollEnabled = true
         scroll.alwaysBounceVertical = true
@@ -330,7 +330,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         view.backgroundColor = textAndBackgroundRed
         return view
     }()
-
+    
     
     let confirmPasswordTextField: UITextField = {
         let textField = UITextField()
@@ -347,7 +347,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         view.backgroundColor = textAndBackgroundRed
         return view
     }()
-
+    
     
     let securityQuestionTextField: UITextField = {
         let textField = UITextField()
@@ -359,7 +359,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     }()
     
     let securityQuestionRightView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -371,10 +371,10 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-
+    
     
     lazy var securityQuestionPicker: UIPickerView = {
-       let picker = UIPickerView()
+        let picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self
         return picker
@@ -385,7 +385,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         view.backgroundColor = textAndBackgroundRed
         return view
     }()
-
+    
     
     let securityAnswerTextField: UITextField = {
         let textField = UITextField()
@@ -414,10 +414,10 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         button.addTarget(self, action: #selector(handleCenterNavNext), for: .touchUpInside)
         return button
     }()
-
-
-
-//      MARK: Creating items controlled by right NavBarCircle
+    
+    
+    
+    //      MARK: Creating items controlled by right NavBarCircle
     
     
     let rightNavBarUserInputContainer: UIView = {
@@ -425,7 +425,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-
+    
     
     let loginTextLabel: UILabel = {
         let label = UILabel()
@@ -461,8 +461,8 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         textField.font = UIFont.systemFont(ofSize: 12)
         return textField
     }()
-
-
+    
+    
     
     let rightNavPasswordSeparator: UIView = {
         let view = UIView()
@@ -482,9 +482,9 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
-
-
-
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -494,7 +494,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         //Adds the container for holding all navBar items to main view
         view.addSubview(navBarContainer)
         
-//      MARK: Adds all navBar items to the navBar container
+        //      MARK: Adds all navBar items to the navBar container
         navBarContainer.addSubview(backgroundImageView)
         navBarContainer.addSubview(connectingLineView)
         navBarContainer.addSubview(backButton)
@@ -516,7 +516,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         containerForAllControlledElements.addSubview(containerForItemsControlledByCenterNavBarCircle)
         containerForAllControlledElements.addSubview(containerForItemsControlledByRightNavBarCircle)
         
-//      MARK: Adds all components controlled by leftNavBarCircle (Identification page) to appropriate views
+        //      MARK: Adds all components controlled by leftNavBarCircle (Identification page) to appropriate views
         containerForItemsControlledByLeftNavBarCircle.addSubview(leftNavBarUserInputContainer)
         containerForItemsControlledByLeftNavBarCircle.addSubview(titleTextLabel)
         containerForItemsControlledByLeftNavBarCircle.addSubview(skipBVNButton)
@@ -527,7 +527,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         leftNavBarUserInputContainer.addSubview(datePickerTextField)
         containerForItemsControlledByLeftNavBarCircle.addSubview(nextButton)
         
-//      MARK: Adds all components controlled by centerNavBarCircle (Registration page) to appropriate views
+        //      MARK: Adds all components controlled by centerNavBarCircle (Registration page) to appropriate views
         containerForItemsControlledByCenterNavBarCircle.addSubview(scrollView)
         scrollView.addSubview(centerNavUserInputContainer)
         centerNavUserInputContainer.addSubview(registrationTitleLabel)
@@ -546,7 +546,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         securityQuestionRightView.addSubview(downArrowImageView)
         
         
-//      MARK: Adds all components controlled by rightNavBarCircle (Login page) to appropriate views
+        //      MARK: Adds all components controlled by rightNavBarCircle (Login page) to appropriate views
         containerForItemsControlledByRightNavBarCircle.addSubview(rightNavBarUserInputContainer)
         containerForItemsControlledByRightNavBarCircle.addSubview(loginTextLabel)
         containerForItemsControlledByRightNavBarCircle.addSubview(rightNavEmailTextField)
@@ -556,7 +556,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         containerForItemsControlledByRightNavBarCircle.addSubview(loginButton)
         
         
-//      MARK: Calls autolayout functions for menu bar items
+        //      MARK: Calls autolayout functions for menu bar items
         setupNavBarContainer()
         setupBackgroundImageView()
         setupBackButton()
@@ -571,13 +571,13 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         setupRightNavBarCircleImageView()
         setupConnectingLineView()
         
-//      MARK: Calls autolayout functions for all view containers
+        //      MARK: Calls autolayout functions for all view containers
         setupContainerForAllControlledElements()
         setupContainerForItemsControlledByLeftNavBarCircle()
         setupContainerForItemsControlledByCenterNavBarCircle()
         setupContainerForItemsControlledByRightNavBarCircle()
         
-//      MARK: Calls autolayouts to components inside containerControlledByLeftNavBarCircle
+        //      MARK: Calls autolayouts to components inside containerControlledByLeftNavBarCircle
         setupLeftNavBarUserInputContainer()
         setupTitleTextLabel()
         setupSkipBVNButton()
@@ -588,7 +588,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         setupDatePickerTextField()
         setupNextButton()
         
-//      MARK: Calls autoLayouts to components insde containerControlledByCenterNavBarCircle
+        //      MARK: Calls autoLayouts to components insde containerControlledByCenterNavBarCircle
         setupScrollView()
         setupCenterNavUserInputContainer()
         setupRegistrationTitleLabel()
@@ -606,7 +606,7 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         setupSecurityQuestionRightView()
         setupDownArrowImageView()
         
-//      MARK: Calls autoLayout to components inside containerControlledByCenterNavBarCircle
+        //      MARK: Calls autoLayout to components inside containerControlledByCenterNavBarCircle
         setupRightNavBarUserInputContainer()
         setupLoginTextLabel()
         setupRightNavEmailTextField()
@@ -646,6 +646,6 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
-
+    
 }
 

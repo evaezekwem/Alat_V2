@@ -37,7 +37,7 @@ class GetStartedLoginController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-
+    
     let textAndButtonContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -45,7 +45,7 @@ class GetStartedLoginController: UIViewController {
     }()
     
     let titleLabelText: UITextView = {
-       let text = UITextView()
+        let text = UITextView()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = "Let's get started..."
         text.font = UIFont.systemFont(ofSize: 38)
@@ -69,15 +69,15 @@ class GetStartedLoginController: UIViewController {
         return text
     }()
     
-    let countryCodeTextView: UITextView = {
-       let text = UITextView()
+    let countryCodeTextView: UITextField = {
+        let text = UITextField()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = "+234"
+        text.layoutMargins = UIEdgeInsetsMake(0, 0, 0, 0)
         text.font = UIFont.systemFont(ofSize: 24)
-        text.isEditable = false
         text.backgroundColor = nil
         text.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 0.7)
-        text.textAlignment = .left
+        text.textAlignment = .right
         return text
     }()
     
@@ -85,16 +85,17 @@ class GetStartedLoginController: UIViewController {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 0.7)
-       return view
+        return view
     }()
     
     let userInputTextField: UITextField = {
-       let textField = UITextField()
+        let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.backgroundColor = nil
+        textField.placeholder = "7035643564"
         textField.font = UIFont.systemFont(ofSize: 24)
+        textField.backgroundColor = nil
         textField.textColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 0.7)
-        
+        textField.textAlignment = .left
         return textField
     }()
     
@@ -105,7 +106,7 @@ class GetStartedLoginController: UIViewController {
         view.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 0.7)
         return view
     }()
-
+    
     
     let startButton: UIButton = {
         let button = UIButton(type: .system)
@@ -119,8 +120,8 @@ class GetStartedLoginController: UIViewController {
         button.addTarget(self, action: #selector(handleStart), for: .touchUpInside)
         return button
     }()
-
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -169,7 +170,7 @@ class GetStartedLoginController: UIViewController {
     func setupContainerView() {
         containerView.anchorToTop(top: backgroundImageView.topAnchor, left: backgroundImageView.leftAnchor, bottom: backgroundImageView.bottomAnchor, right: backgroundImageView.rightAnchor)
     }
-
+    
     func setupRightIconImageView() {
         rightIconImageView.anchorWithConstantsToTop(top: containerView.topAnchor, left: nil, bottom: nil, right: containerView.rightAnchor, topConstant: 60, leftConstant: 0, bottomConstant: 0, rightConstant: 40)
         rightIconImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
@@ -181,7 +182,7 @@ class GetStartedLoginController: UIViewController {
         leftIconImageView.anchorWithConstantsToTop(top: containerView.topAnchor, left: containerView.leftAnchor, bottom: nil, right: nil, topConstant: 60, leftConstant: 40, bottomConstant: 0, rightConstant: 0)
         leftIconImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         leftIconImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
-
+        
     }
     
     func setupTextAndButtonContainer() {
@@ -222,14 +223,15 @@ class GetStartedLoginController: UIViewController {
     }
     
     func setupUserInputTextField() {
-        userInputTextField.anchorWithConstantsToTop(top: descriptionText.topAnchor, left: countryCodeTextView.rightAnchor, bottom: nil, right: nil, topConstant: 107, leftConstant: 5, bottomConstant: 0, rightConstant: 0)
+        
+        userInputTextField.anchorWithConstantsToTop(top: descriptionText.topAnchor, left: countryCodeTextView.rightAnchor, bottom: nil, right: nil, topConstant: 101, leftConstant: 5, bottomConstant: 0, rightConstant: 0)
         userInputTextField.widthAnchor.constraint(equalTo: textAndButtonContainer.widthAnchor, multiplier: 0.7).isActive = true
         userInputTextField.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
     }
     
     func setupPhoneNumberSeparatorView() {
-        phoneNumberSeparatorView.anchorWithConstantsToTop(top: userInputTextField.bottomAnchor, left: countryCodeSeparatorView.rightAnchor, bottom: nil, right: nil, topConstant: 9, leftConstant: 5, bottomConstant: 0, rightConstant: 0)
+        phoneNumberSeparatorView.anchorWithConstantsToTop(top: userInputTextField.bottomAnchor, left: countryCodeSeparatorView.rightAnchor, bottom: nil, right: nil, topConstant: 15, leftConstant: 5, bottomConstant: 0, rightConstant: 0)
         phoneNumberSeparatorView.widthAnchor.constraint(equalTo: userInputTextField.widthAnchor).isActive = true
         phoneNumberSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
@@ -245,7 +247,7 @@ class GetStartedLoginController: UIViewController {
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
-
+    
 }
 
 

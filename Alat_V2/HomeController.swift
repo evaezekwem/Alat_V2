@@ -35,7 +35,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     
-
+    
     
     func handleProfileIconClicked(){
         let profileVC = ProfileVC()
@@ -48,15 +48,15 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func handleMenuPressed(){
         
         self.findHamburguerViewController()?.showMenuViewController()
-
         
-//        
-//        let homeController = AccountOverviewController()
-//        let contentController = UINavigationController(rootViewController: homeController)
-//        let menuVC = SideMenuVC(collectionViewLayout: UICollectionViewLayout())
-//        let rootViewController = RootVC(contentViewController: contentController, menuViewController: menuVC)
-//        
-//        present(rootViewController, animated: true, completion: nil)
+        
+        //
+        //        let homeController = AccountOverviewController()
+        //        let contentController = UINavigationController(rootViewController: homeController)
+        //        let menuVC = SideMenuVC(collectionViewLayout: UICollectionViewLayout())
+        //        let rootViewController = RootVC(contentViewController: contentController, menuViewController: menuVC)
+        //
+        //        present(rootViewController, animated: true, completion: nil)
         
         print("Menu clicked")
     }

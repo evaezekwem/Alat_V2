@@ -52,7 +52,7 @@ class AccountOverviewController: UIViewController {
     }()
     
     let notificationIndicator: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor(red: 68/255, green: 219/255, blue: 94/255, alpha: 1)
         view.layer.cornerRadius = 5
@@ -87,7 +87,7 @@ class AccountOverviewController: UIViewController {
     }()
     
     lazy var downArrowImage: UIImageView = {
-       let ImageView = UIImageView()
+        let ImageView = UIImageView()
         ImageView.image = UIImage(named: "arrow_down")
         ImageView.contentMode = .scaleAspectFit
         ImageView.isUserInteractionEnabled = true
@@ -104,19 +104,19 @@ class AccountOverviewController: UIViewController {
         ImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleUpArrowClicked)))
         return ImageView
     }()
-
     
     
-//      MARK: Main view 
+    
+    //      MARK: Main view
     let mainViewContainer: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
         return view
     }()
     
     let mainView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
         view.isHidden = true
@@ -129,7 +129,7 @@ class AccountOverviewController: UIViewController {
         view.backgroundColor = .white
         return view
     }()
-
+    
     
     let mainViewCenterImage: UIImageView = {
         let ImageView = UIImageView()
@@ -166,7 +166,7 @@ class AccountOverviewController: UIViewController {
         text.textAlignment = NSTextAlignment.center
         return text
     }()
-
+    
     let dropDownView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -181,16 +181,16 @@ class AccountOverviewController: UIViewController {
         ImageView.image = UIImage(named: "gradient_background")
         return ImageView
     }()
-
-
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Adds the container for holding all navBar items to main view
         view.addSubview(navBarContainer)
         
-//      MARK: Adds all navBar items to the navBar container
+        //      MARK: Adds all navBar items to the navBar container
         navBarContainer.addSubview(backgroundImageView)
         navBarContainer.addSubview(menuButton)
         navBarContainer.addSubview(accountOverviewText)
@@ -202,7 +202,7 @@ class AccountOverviewController: UIViewController {
         navBarContainer.addSubview(downArrowImage)
         navBarContainer.addSubview(upArrowImage)
         
-//      MARK: Adds mainview and mainview items to view hierachy
+        //      MARK: Adds mainview and mainview items to view hierachy
         view.addSubview(mainViewContainer)
         mainViewContainer.addSubview(dropDownView)
         dropDownView.addSubview(dropDownBackgroundImage)
@@ -215,15 +215,15 @@ class AccountOverviewController: UIViewController {
         mainView.addSubview(mainViewCenterImage)
         mainView.addSubview(noTransactionText)
         
-       
         
         
         
         
-////      MARK: Adds all items in dropdownViews to view hierachy
-
-
-//      MARK: Calls autolayout functions for menu bar items
+        
+        ////      MARK: Adds all items in dropdownViews to view hierachy
+        
+        
+        //      MARK: Calls autolayout functions for menu bar items
         setupNavBarContainer()
         setupBackgroundImageView()
         setupMenuButton()
@@ -239,7 +239,7 @@ class AccountOverviewController: UIViewController {
         
         setupMainViewContainer()
         
-//      MARK: Calls autolayout functions for dropDown menu items
+        //      MARK: Calls autolayout functions for dropDown menu items
         setupDropDownView()
         setupDropDownBackgroundImage()
         
@@ -250,14 +250,14 @@ class AccountOverviewController: UIViewController {
         setupMainView()
         setupMainViewCenterImage()
         setupNoTransactionText()
-
+        
         
     }
     
-
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
-
-  
+    
+    
 }

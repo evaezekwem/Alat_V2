@@ -10,7 +10,7 @@ import UIKit
 
 
 class LoginController : UIViewController{
-
+    
     override func viewDidLoad() {
         setupViews()
     }
@@ -44,7 +44,7 @@ class LoginController : UIViewController{
         text.backgroundColor = nil
         text.textColor = .white
         text.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                      attributes: [NSForegroundColorAttributeName: UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 0.7)])
+                                                        attributes: [NSForegroundColorAttributeName: UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 0.7)])
         text.textAlignment = .left
         return text
     }()
@@ -63,7 +63,7 @@ class LoginController : UIViewController{
         imageView.image = UIImage(named: "gradient_background")
         return imageView
     }()
-
+    
     let descriptionText: UITextView = {
         let text = UITextView()
         text.translatesAutoresizingMaskIntoConstraints = false
@@ -91,14 +91,14 @@ class LoginController : UIViewController{
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-
+    
     
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .white
         button.setTitle("Login", for: .normal)
         button.setTitleColor(UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1)
- , for: .normal)
+            , for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.layer.cornerRadius = 7.5
         button.layer.masksToBounds = true
@@ -120,12 +120,12 @@ class LoginController : UIViewController{
     func handleLogin() {
         let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
         let contentController = UINavigationController(rootViewController: homeController)
+        let menuVC = SideMenuVC(collectionViewLayout: UICollectionViewFlowLayout())
+        let rootViewController = RootVC(contentViewController: contentController, menuViewController: menuVC)
         
-        present(contentController, animated: false, completion: nil)
-        
-        print("Login clicked")
+        present(rootViewController, animated: false, completion: nil)
     }
-
+    
     func handleForgotPassword() {
         print("forgot password clicked")
     }
@@ -133,7 +133,7 @@ class LoginController : UIViewController{
     func setupViews(){
         view.addSubview(backgroundImageView)
         view.addSubview(passwordTv)
-
+        
         view.addSubview(passwordTvDivider)
         view.addSubview(emailTvDivider)
         view.addSubview(emailTv)
@@ -143,15 +143,15 @@ class LoginController : UIViewController{
         view.addSubview(leftIconImageView)
         view.addSubview(loginButton)
         view.addSubview(forgotButton)
-
-
+        
+        
         
         
         backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         backgroundImageView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         backgroundImageView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-
+        
         leftIconImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 48).isActive = true
         leftIconImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 48).isActive = true
         leftIconImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
@@ -198,13 +198,13 @@ class LoginController : UIViewController{
         loginButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
         loginButton.widthAnchor.constraint(equalTo: passwordTvDivider.widthAnchor).isActive = true
         
-
         
-    
+        
+        
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
-
+    
 }

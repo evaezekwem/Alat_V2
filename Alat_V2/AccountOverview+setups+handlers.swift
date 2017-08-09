@@ -170,6 +170,6 @@ extension AccountOverviewController {
         noTransactionTextLarge.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
-
+    
     
 }

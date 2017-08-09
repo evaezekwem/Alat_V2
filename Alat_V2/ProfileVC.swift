@@ -10,22 +10,22 @@ import UIKit
 
 
 class ProfileVC : UIViewController{
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         SetupViews()
     }
-
+    
     let navBar: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints  =  false
         return view
     }()
     
     let navBarBackgroundImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.image = UIImage(named: "gradient_background")
         imageView.translatesAutoresizingMaskIntoConstraints =  false
         return imageView
@@ -49,7 +49,7 @@ class ProfileVC : UIViewController{
         text.textAlignment = NSTextAlignment.center
         return text
     }()
-
+    
     let mainViewContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints  =  false
@@ -147,7 +147,7 @@ class ProfileVC : UIViewController{
         navBar.addSubview(navBarBackgroundImageView)
         navBar.addSubview(backButton)
         navBar.addSubview(accountInfoText)
-   
+        
         view.addSubview(mainViewContainer)
         mainViewContainer.addSubview(profileDetailContainer)
         mainViewContainer.addSubview(profileImage)
@@ -160,7 +160,7 @@ class ProfileVC : UIViewController{
         mainViewContainer.addSubview(accountNumber)
         mainViewContainer.addSubview(profileName)
         
-
+        
         
         navBar.anchorToTop(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor)
         navBar.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
@@ -175,7 +175,7 @@ class ProfileVC : UIViewController{
         accountInfoText.centerXAnchor.constraint(equalTo: navBar.centerXAnchor).isActive = true
         accountInfoText.bottomAnchor.constraint(equalTo: navBar.bottomAnchor).isActive = true
         accountInfoText.heightAnchor.constraint(equalToConstant: 30).isActive = true
-
+        
         
         
         mainViewContainer.anchorToTop(top: navBar.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
@@ -198,7 +198,7 @@ class ProfileVC : UIViewController{
         profileDetailContainer.centerXAnchor.constraint(equalTo: mainViewContainer.centerXAnchor).isActive = true
         profileDetailContainer.widthAnchor.constraint(equalTo: mainViewContainer.widthAnchor, constant: -50).isActive = true
         profileDetailContainer.heightAnchor.constraint(equalToConstant: 350).isActive = true
-    
+        
         accountNameLabel.topAnchor.constraint(equalTo: profileDetailContainer.topAnchor, constant: 20).isActive = true
         accountNameLabel.leftAnchor.constraint(equalTo: profileDetailContainer.leftAnchor, constant: 20).isActive = true
         accountNameLabel.widthAnchor.constraint(equalToConstant: 300).isActive = true
@@ -258,7 +258,7 @@ class ProfileVC : UIViewController{
                     let v = UIView()
                     v.translatesAutoresizingMaskIntoConstraints = false
                     v.backgroundColor = textGray
-                
+                    
                     return v
                 }()
                 
@@ -290,7 +290,7 @@ class ProfileVC : UIViewController{
                 divider.heightAnchor.constraint(equalToConstant: 1).isActive = true
                 return v
             }()
-
+            
             profileDetailContainer.addSubview(extraDetailContainer)
             
             let tAnch = extraDetailContainer.topAnchor.constraint(equalTo: containerTopAnchor, constant: 48)
@@ -308,7 +308,7 @@ class ProfileVC : UIViewController{
         }
         
     }
-
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
