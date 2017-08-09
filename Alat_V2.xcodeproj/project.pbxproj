@@ -19,6 +19,11 @@
 		A6A9EAA61F3AC35E00BBFFF4 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A9EAA51F3AC35E00BBFFF4 /* HomePageController.swift */; };
 		A6A9EAA81F3AC4C900BBFFF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A9EAA71F3AC4C900BBFFF4 /* Main.storyboard */; };
 		A6A9EAAA1F3AC4E900BBFFF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A9EAA91F3AC4E900BBFFF4 /* LaunchScreen.storyboard */; };
+		A6A9EAAC1F3B5ACB00BBFFF4 /* TransferMoneyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A9EAAB1F3B5ACB00BBFFF4 /* TransferMoneyController.swift */; };
+		A6A9EAAE1F3B5AF500BBFFF4 /* MakePaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A9EAAD1F3B5AF500BBFFF4 /* MakePaymentController.swift */; };
+		A6A9EAB01F3B5B2000BBFFF4 /* GoalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A9EAAF1F3B5B2000BBFFF4 /* GoalsController.swift */; };
+		A6A9EAB21F3B5B4D00BBFFF4 /* ReferFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A9EAB11F3B5B4D00BBFFF4 /* ReferFriendsController.swift */; };
+		A6A9EAB41F3B5BA900BBFFF4 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A9EAB31F3B5BA900BBFFF4 /* SettingsController.swift */; };
 		A6B153411F394C10000DAEDF /* WhiteOnRedBgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B153401F394C10000DAEDF /* WhiteOnRedBgViewController.swift */; };
 		A6CC79241F31CD2F00601DC8 /* AccountOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79231F31CD2F00601DC8 /* AccountOverviewController.swift */; };
 		A6CC79261F31D92B00601DC8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79251F31D92B00601DC8 /* HomeController.swift */; };
@@ -46,6 +51,11 @@
 		A6A9EAA51F3AC35E00BBFFF4 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		A6A9EAA71F3AC4C900BBFFF4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A6A9EAA91F3AC4E900BBFFF4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A6A9EAAB1F3B5ACB00BBFFF4 /* TransferMoneyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferMoneyController.swift; sourceTree = "<group>"; };
+		A6A9EAAD1F3B5AF500BBFFF4 /* MakePaymentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakePaymentController.swift; sourceTree = "<group>"; };
+		A6A9EAAF1F3B5B2000BBFFF4 /* GoalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsController.swift; sourceTree = "<group>"; };
+		A6A9EAB11F3B5B4D00BBFFF4 /* ReferFriendsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferFriendsController.swift; sourceTree = "<group>"; };
+		A6A9EAB31F3B5BA900BBFFF4 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		A6B153401F394C10000DAEDF /* WhiteOnRedBgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteOnRedBgViewController.swift; sourceTree = "<group>"; };
 		A6CC79231F31CD2F00601DC8 /* AccountOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOverviewController.swift; sourceTree = "<group>"; };
 		A6CC79251F31D92B00601DC8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -119,24 +129,29 @@
 				A695640F1F28FA7D00D312BA /* GetStartedLoginController.swift */,
 				A69564151F29462000D312BA /* RegistrationController.swift */,
 				A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */,
-				A625E9D11F2E693900E89313 /* FundAccountController.swift */,
 				A61204D51F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift */,
 				A6CC79231F31CD2F00601DC8 /* AccountOverviewController.swift */,
 				A61204D71F2FFC4500221B77 /* LoginController.swift */,
 				A6CC79251F31D92B00601DC8 /* HomeController.swift */,
 				A6CC79341F32260300601DC8 /* ProfileVC.swift */,
-				A6CC792F1F3225AA00601DC8 /* gtbranch */,
+				A6A9EAB51F3B5BC300BBFFF4 /* SideMenuControllers */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		A6CC792F1F3225AA00601DC8 /* gtbranch */ = {
+		A6A9EAB51F3B5BC300BBFFF4 /* SideMenuControllers */ = {
 			isa = PBXGroup;
 			children = (
 				A6CC79301F3225F400601DC8 /* SideMenuVC.swift */,
 				A6CC79311F3225F400601DC8 /* RootVC.swift */,
+				A625E9D11F2E693900E89313 /* FundAccountController.swift */,
+				A6A9EAAB1F3B5ACB00BBFFF4 /* TransferMoneyController.swift */,
+				A6A9EAAD1F3B5AF500BBFFF4 /* MakePaymentController.swift */,
+				A6A9EAAF1F3B5B2000BBFFF4 /* GoalsController.swift */,
+				A6A9EAB11F3B5B4D00BBFFF4 /* ReferFriendsController.swift */,
+				A6A9EAB31F3B5BA900BBFFF4 /* SettingsController.swift */,
 			);
-			name = gtbranch;
+			name = SideMenuControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,17 +227,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A9EAB41F3B5BA900BBFFF4 /* SettingsController.swift in Sources */,
 				A6B153411F394C10000DAEDF /* WhiteOnRedBgViewController.swift in Sources */,
 				A625E9D21F2E693900E89313 /* FundAccountController.swift in Sources */,
+				A6A9EAB01F3B5B2000BBFFF4 /* GoalsController.swift in Sources */,
 				A69563FE1F28CDB300D312BA /* ViewController.swift in Sources */,
 				A69563FC1F28CDB300D312BA /* AppDelegate.swift in Sources */,
 				A61204D81F2FFC4500221B77 /* LoginController.swift in Sources */,
+				A6A9EAB21F3B5B4D00BBFFF4 /* ReferFriendsController.swift in Sources */,
+				A6A9EAAC1F3B5ACB00BBFFF4 /* TransferMoneyController.swift in Sources */,
 				A6CC79331F3225F400601DC8 /* RootVC.swift in Sources */,
 				A6CC792E1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift in Sources */,
 				A6A9EAA61F3AC35E00BBFFF4 /* HomePageController.swift in Sources */,
 				A6CC792C1F31DA5B00601DC8 /* DLHamburguerViewController.swift in Sources */,
 				A6CC79261F31D92B00601DC8 /* HomeController.swift in Sources */,
 				A6520CFD1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift in Sources */,
+				A6A9EAAE1F3B5AF500BBFFF4 /* MakePaymentController.swift in Sources */,
 				A6CC792A1F31D9A700601DC8 /* Utilities.swift in Sources */,
 				A6CC79241F31CD2F00601DC8 /* AccountOverviewController.swift in Sources */,
 				A69564161F29462000D312BA /* RegistrationController.swift in Sources */,

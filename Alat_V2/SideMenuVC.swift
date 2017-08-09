@@ -52,8 +52,35 @@ class SideMenuVC : UICollectionViewController, UICollectionViewDelegateFlowLayou
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let nvc = self.mainNavigationController()
-        
+//        let nvc = self.mainNavigationController()
+        switch indexPath.row {
+        case 0:
+            let fundAccountController = FundAccountController()
+            present(fundAccountController, animated: false, completion: nil)
+            
+        case 1:
+            let transferMoneyController = TransferMoneyController()
+            present(transferMoneyController, animated: false, completion: nil)
+            
+        case 2:
+            let makePaymentController = MakePaymentController()
+            present(makePaymentController, animated: false, completion: nil)
+            
+        case 3:
+            let goalsController = GoalsController()
+            present(goalsController, animated: false, completion: nil)
+            
+        case 4:
+            let referFriendsController = ReferFriendsController()
+            present(referFriendsController, animated: false, completion: nil)
+            
+        case 5:
+            let settingsController = SettingsController()
+            present(settingsController, animated: false, completion: nil)
+            
+        default:
+            break
+        }
         
     }
     
