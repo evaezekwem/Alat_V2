@@ -77,6 +77,13 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         return imageView
     }()
     
+    let leftNavBarCheckImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "check_icon"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isHidden = true
+        return imageView
+    }()
+    
     let centerNavBarOuterCircleView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -109,6 +116,13 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         imageView.isUserInteractionEnabled = true
         imageView.contentMode = .scaleAspectFill
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCenterNavCircleClicked)))
+        return imageView
+    }()
+    
+    let centerNavBarCheckImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "check_icon"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isHidden = true
         return imageView
     }()
     
@@ -501,9 +515,11 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         navBarContainer.addSubview(leftNavBarOuterCircleView)
         leftNavBarOuterCircleView.addSubview(leftNavBarInnerCircleView)
         leftNavBarInnerCircleView.addSubview(leftNavBarCircleImageView)
+        navBarContainer.addSubview(leftNavBarCheckImageView)
         navBarContainer.addSubview(centerNavBarOuterCircleView)
         centerNavBarOuterCircleView.addSubview(centerNavBarInnerCircleView)
         centerNavBarInnerCircleView.addSubview(centerNavBarCircleImageView)
+        navBarContainer.addSubview(centerNavBarCheckImageView)
         navBarContainer.addSubview(rightNavBarOuterCircleView)
         rightNavBarOuterCircleView.addSubview(rightNavBarInnerCircleView)
         rightNavBarInnerCircleView.addSubview(rightNavBarCircleImageView)
@@ -563,9 +579,11 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         setupLeftNavBarOuterCircleView()
         setupLefttNavBarInnerCircleView()
         setupLeftNavBarCircleImageView()
+        setupLeftNavBarCheckImageView()
         setupCenterNavBarOuterCircleView()
         setupCenterNavBarInnerCircleView()
         setupCenterNavBarCircleImageView()
+        setupCenterNavBarCheckImageView()
         setupRightNavBarOuterCircleView()
         setupRightNavBarInnerCircleView()
         setupRightNavBarCircleImageView()

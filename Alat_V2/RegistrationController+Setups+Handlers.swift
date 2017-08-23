@@ -101,6 +101,7 @@ extension RegistrationController {
     
     func handleCenterNavNext() {
         handleRightNavCircleClicked()
+        centerNavBarCheckImageView.isHidden = false
     }
     
     
@@ -149,6 +150,8 @@ extension RegistrationController {
     
     func handleNext() {
         handleCenterNavCircleClicked()
+        
+        leftNavBarCheckImageView.isHidden = false
         
     }
     
@@ -204,6 +207,12 @@ extension RegistrationController {
         leftNavBarCircleImageView.heightAnchor.constraint(equalToConstant: 22).isActive = true
     }
     
+    func setupLeftNavBarCheckImageView() {
+        leftNavBarCheckImageView.anchorWithConstantsToTop(top: nil, left: nil, bottom: leftNavBarOuterCircleView.bottomAnchor, right: leftNavBarOuterCircleView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: -22)
+        leftNavBarCheckImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        leftNavBarCheckImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
+    
     func setupCenterNavBarOuterCircleView() {
         centerNavBarOuterCircleView.centerXAnchor.constraint(equalTo: navBarContainer.centerXAnchor).isActive = true
         centerNavBarOuterCircleView.anchorWithConstantsToTop(top: nil, left: nil, bottom: navBarContainer.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 30, rightConstant: 0)
@@ -223,6 +232,12 @@ extension RegistrationController {
         centerNavBarCircleImageView.centerYAnchor.constraint(equalTo: centerNavBarInnerCircleView.centerYAnchor).isActive = true
         centerNavBarCircleImageView.widthAnchor.constraint(equalToConstant: 22).isActive = true
         centerNavBarCircleImageView.heightAnchor.constraint(equalToConstant: 22).isActive = true
+    }
+    
+    func setupCenterNavBarCheckImageView() {
+        centerNavBarCheckImageView.anchorWithConstantsToTop(top: nil, left: nil, bottom: centerNavBarOuterCircleView.bottomAnchor, right: centerNavBarOuterCircleView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: -22)
+        centerNavBarCheckImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        centerNavBarCheckImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
     func setupRightNavBarOuterCircleView() {
@@ -302,10 +317,9 @@ extension RegistrationController {
         userBVNSeparator.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
-    func setupCantRememberBVNButton() {
-        cantRememberBVNButton.anchorWithConstantsToTop(top: userBVNSeparator.bottomAnchor, left: leftNavBarUserInputContainer.leftAnchor, bottom: nil, right: nil, topConstant: 5, leftConstant: -5, bottomConstant: 0, rightConstant: 0)
-        cantRememberBVNButton.widthAnchor.constraint(equalTo: leftNavBarUserInputContainer.widthAnchor, multiplier: 0.6).isActive = true
-        cantRememberBVNButton.heightAnchor.constraint(equalToConstant: 10).isActive = true
+    func setupDatePickerTextField() {
+        datePickerTextField.anchorWithConstantsToTop(top: nil, left: leftNavBarUserInputContainer.leftAnchor, bottom: datePickerSeparator.topAnchor, right: leftNavBarUserInputContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
+        datePickerTextField.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
     func setupDatePickerSeparator() {
@@ -313,9 +327,11 @@ extension RegistrationController {
         datePickerSeparator.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
-    func setupDatePickerTextField() {
-        datePickerTextField.anchorWithConstantsToTop(top: nil, left: leftNavBarUserInputContainer.leftAnchor, bottom: datePickerSeparator.topAnchor, right: leftNavBarUserInputContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
-        datePickerTextField.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    func setupCantRememberBVNButton() {
+        
+        cantRememberBVNButton.anchorWithConstantsToTop(top: leftNavBarUserInputContainer.bottomAnchor, left: leftNavBarUserInputContainer.leftAnchor, bottom: nil, right: nil, topConstant: 30, leftConstant: -5, bottomConstant: 0, rightConstant: 0)
+        cantRememberBVNButton.widthAnchor.constraint(equalTo: leftNavBarUserInputContainer.widthAnchor, multiplier: 0.6).isActive = true
+        cantRememberBVNButton.heightAnchor.constraint(equalToConstant: 10).isActive = true
     }
     
     func setupNextButton() {
