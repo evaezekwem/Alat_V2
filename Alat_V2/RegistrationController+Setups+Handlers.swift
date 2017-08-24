@@ -208,7 +208,7 @@ extension RegistrationController {
     }
     
     func setupLeftNavBarCheckImageView() {
-        leftNavBarCheckImageView.anchorWithConstantsToTop(top: nil, left: nil, bottom: leftNavBarOuterCircleView.bottomAnchor, right: leftNavBarOuterCircleView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: -22)
+        leftNavBarCheckImageView.anchorWithConstantsToTop(top: nil, left: nil, bottom: leftNavBarOuterCircleView.bottomAnchor, right: leftNavBarOuterCircleView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: -21)
         leftNavBarCheckImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
         leftNavBarCheckImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
@@ -235,7 +235,7 @@ extension RegistrationController {
     }
     
     func setupCenterNavBarCheckImageView() {
-        centerNavBarCheckImageView.anchorWithConstantsToTop(top: nil, left: nil, bottom: centerNavBarOuterCircleView.bottomAnchor, right: centerNavBarOuterCircleView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: -22)
+        centerNavBarCheckImageView.anchorWithConstantsToTop(top: nil, left: nil, bottom: centerNavBarOuterCircleView.bottomAnchor, right: centerNavBarOuterCircleView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: -21)
         centerNavBarCheckImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
         centerNavBarCheckImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
@@ -432,9 +432,9 @@ extension RegistrationController {
     //      MARK: Adding constraints to items in the container controlled by rightNavBarCircle
     func setupRightNavBarUserInputContainer() {
         rightNavBarUserInputContainer.centerXAnchor.constraint(equalTo: containerForItemsControlledByRightNavBarCircle.centerXAnchor).isActive = true
-        rightNavBarUserInputContainer.centerYAnchor.constraint(equalTo: containerForItemsControlledByRightNavBarCircle.centerYAnchor, constant: -35).isActive = true
+        rightNavBarUserInputContainer.centerYAnchor.constraint(equalTo: containerForItemsControlledByRightNavBarCircle.centerYAnchor, constant: -50).isActive = true
         rightNavBarUserInputContainer.widthAnchor.constraint(equalTo: containerForItemsControlledByRightNavBarCircle.widthAnchor, constant: -70).isActive = true
-        rightNavBarUserInputContainer.heightAnchor.constraint(equalToConstant: 90).isActive = true
+        rightNavBarUserInputContainer.heightAnchor.constraint(equalToConstant: 110).isActive = true
         
     }
     
@@ -445,9 +445,15 @@ extension RegistrationController {
         
     }
     
+    func setupRightNavEmailLabel() {
+        rightNavEmailLabel.anchorToTop(top: rightNavBarUserInputContainer.topAnchor, left: rightNavBarUserInputContainer.leftAnchor, bottom: nil, right: rightNavBarUserInputContainer.rightAnchor)
+        rightNavEmailLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+    }
+    
     func setupRightNavEmailTextField() {
-        rightNavEmailTextField.anchorToTop(top: rightNavBarUserInputContainer.topAnchor, left: rightNavBarUserInputContainer.leftAnchor, bottom: nil, right: rightNavBarUserInputContainer.rightAnchor)
-        rightNavEmailTextField.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        rightNavEmailTextField.anchorToTop(top: rightNavEmailLabel.bottomAnchor, left: rightNavBarUserInputContainer.leftAnchor, bottom: nil, right: rightNavBarUserInputContainer.rightAnchor)
+        rightNavEmailTextField.heightAnchor.constraint(equalToConstant: 18).isActive = true
         
     }
     
@@ -456,9 +462,15 @@ extension RegistrationController {
         rightNavEmailSeparator.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
+    func setupRightNavPasswordLabel() {
+        rightNavPasswordLabel.anchorWithConstantsToTop(top: nil, left: rightNavBarUserInputContainer.leftAnchor, bottom: rightNavPasswordTextField.topAnchor, right: rightNavBarUserInputContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
+        rightNavPasswordLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+    }
+    
     func setupRightNavPasswordTextField() {
-        rightNavPasswordTextField.anchorWithConstantsToTop(top: nil, left: rightNavBarUserInputContainer.leftAnchor, bottom: datePickerSeparator.topAnchor, right: rightNavBarUserInputContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
-        rightNavPasswordTextField.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        rightNavPasswordTextField.anchorWithConstantsToTop(top: nil, left: rightNavBarUserInputContainer.leftAnchor, bottom: rightNavPasswordSeparator.topAnchor, right: rightNavBarUserInputContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
+        rightNavPasswordTextField.heightAnchor.constraint(equalToConstant: 18).isActive = true
     }
     
     func setupRightNavPasswordSeparator() {

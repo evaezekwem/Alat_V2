@@ -451,12 +451,23 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         return label
     }()
     
+    let rightNavEmailLabel: UILabel = {
+       let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Email address"
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 8)
+        label.textColor = .gray
+        return label
+    }()
+    
     let rightNavEmailTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Email address"
-        textField.textColor = textGray
-        textField.font = UIFont.systemFont(ofSize: 12)
+        textField.placeholder = "ayo@example.com"
+        textField.autocapitalizationType = .none
+        textField.textColor = .gray
+        textField.font = UIFont.systemFont(ofSize: 18)
         return textField
     }()
     
@@ -466,13 +477,26 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         return view
     }()
     
+    let rightNavPasswordLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Password"
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 8)
+        label.textColor = .gray
+        return label
+
+    }()
+    
     let rightNavPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Password"
+        textField.text = "Password"
+        textField.autocapitalizationType = .none
+        textField.clearsOnBeginEditing = true
         textField.isSecureTextEntry = true
-        textField.textColor = textGray
-        textField.font = UIFont.systemFont(ofSize: 12)
+        textField.textColor = .black
+        textField.font = UIFont.systemFont(ofSize: 18)
         return textField
     }()
     
@@ -565,10 +589,12 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         //      MARK: Adds all components controlled by rightNavBarCircle (Login page) to appropriate views
         containerForItemsControlledByRightNavBarCircle.addSubview(rightNavBarUserInputContainer)
         containerForItemsControlledByRightNavBarCircle.addSubview(loginTextLabel)
-        containerForItemsControlledByRightNavBarCircle.addSubview(rightNavEmailTextField)
-        containerForItemsControlledByRightNavBarCircle.addSubview(rightNavEmailSeparator)
-        containerForItemsControlledByRightNavBarCircle.addSubview(rightNavPasswordTextField)
-        containerForItemsControlledByRightNavBarCircle.addSubview(rightNavPasswordSeparator)
+        rightNavBarUserInputContainer.addSubview(rightNavEmailLabel)
+        rightNavBarUserInputContainer.addSubview(rightNavEmailTextField)
+        rightNavBarUserInputContainer.addSubview(rightNavEmailSeparator)
+        rightNavBarUserInputContainer.addSubview(rightNavPasswordLabel)
+        rightNavBarUserInputContainer.addSubview(rightNavPasswordTextField)
+        rightNavBarUserInputContainer.addSubview(rightNavPasswordSeparator)
         containerForItemsControlledByRightNavBarCircle.addSubview(loginButton)
         
         
@@ -627,8 +653,10 @@ class RegistrationController: UIViewController, UIScrollViewDelegate, UIPickerVi
         //      MARK: Calls autoLayout to components inside containerControlledByCenterNavBarCircle
         setupRightNavBarUserInputContainer()
         setupLoginTextLabel()
+        setupRightNavEmailLabel()
         setupRightNavEmailTextField()
         setupRightNavEmailSeparator()
+        setupRightNavPasswordLabel()
         setupRightNavPasswordTextField()
         setupRightNavPasswordSeparator()
         setupLoginButton()
