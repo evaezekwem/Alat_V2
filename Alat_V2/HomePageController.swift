@@ -83,6 +83,7 @@ class HomePageController: UIViewController {
     func handleSignUp() {
         let getStartedLoginController = GetStartedLoginController()
         present(getStartedLoginController, animated: false , completion: nil)
+     
     }
     
    

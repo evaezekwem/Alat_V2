@@ -34,6 +34,10 @@
 		A6CC79321F3225F400601DC8 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79301F3225F400601DC8 /* SideMenuVC.swift */; };
 		A6CC79331F3225F400601DC8 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79311F3225F400601DC8 /* RootVC.swift */; };
 		A6CC79351F32260300601DC8 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC79341F32260300601DC8 /* ProfileVC.swift */; };
+		A6FBA9161F503E7B00761124 /* OnboardingViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBA9151F503E7B00761124 /* OnboardingViewController1.swift */; };
+		A6FBA9181F503E9C00761124 /* OnboardingViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBA9171F503E9C00761124 /* OnboardingViewController2.swift */; };
+		A6FBA91A1F503ECD00761124 /* OnboardingViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBA9191F503ECC00761124 /* OnboardingViewController3.swift */; };
+		A6FBA91C1F505CBF00761124 /* OnboardingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBA91B1F505CBF00761124 /* OnboardingPageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		A6CC79301F3225F400601DC8 /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		A6CC79311F3225F400601DC8 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		A6CC79341F32260300601DC8 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		A6FBA9151F503E7B00761124 /* OnboardingViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController1.swift; sourceTree = "<group>"; };
+		A6FBA9171F503E9C00761124 /* OnboardingViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController2.swift; sourceTree = "<group>"; };
+		A6FBA9191F503ECC00761124 /* OnboardingViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController3.swift; sourceTree = "<group>"; };
+		A6FBA91B1F505CBF00761124 /* OnboardingPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,10 @@
 				A61204D51F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift */,
 				A6CC79231F31CD2F00601DC8 /* AccountOverviewController.swift */,
 				A61204D71F2FFC4500221B77 /* LoginController.swift */,
+				A6FBA91B1F505CBF00761124 /* OnboardingPageController.swift */,
+				A6FBA9151F503E7B00761124 /* OnboardingViewController1.swift */,
+				A6FBA9171F503E9C00761124 /* OnboardingViewController2.swift */,
+				A6FBA9191F503ECC00761124 /* OnboardingViewController3.swift */,
 				A6CC79251F31D92B00601DC8 /* HomeController.swift */,
 				A6CC79341F32260300601DC8 /* ProfileVC.swift */,
 				A6A9EAB51F3B5BC300BBFFF4 /* SideMenuControllers */,
@@ -232,12 +244,15 @@
 				A625E9D21F2E693900E89313 /* FundAccountController.swift in Sources */,
 				A6A9EAB01F3B5B2000BBFFF4 /* GoalsController.swift in Sources */,
 				A69563FE1F28CDB300D312BA /* ViewController.swift in Sources */,
+				A6FBA91C1F505CBF00761124 /* OnboardingPageController.swift in Sources */,
 				A69563FC1F28CDB300D312BA /* AppDelegate.swift in Sources */,
+				A6FBA9181F503E9C00761124 /* OnboardingViewController2.swift in Sources */,
 				A61204D81F2FFC4500221B77 /* LoginController.swift in Sources */,
 				A6A9EAB21F3B5B4D00BBFFF4 /* ReferFriendsController.swift in Sources */,
 				A6A9EAAC1F3B5ACB00BBFFF4 /* TransferMoneyController.swift in Sources */,
 				A6CC79331F3225F400601DC8 /* RootVC.swift in Sources */,
 				A6CC792E1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift in Sources */,
+				A6FBA9161F503E7B00761124 /* OnboardingViewController1.swift in Sources */,
 				A6A9EAA61F3AC35E00BBFFF4 /* HomePageController.swift in Sources */,
 				A6CC792C1F31DA5B00601DC8 /* DLHamburguerViewController.swift in Sources */,
 				A6CC79261F31D92B00601DC8 /* HomeController.swift in Sources */,
@@ -249,6 +264,7 @@
 				A69564101F28FA7D00D312BA /* GetStartedLoginController.swift in Sources */,
 				A6CC79351F32260300601DC8 /* ProfileVC.swift in Sources */,
 				A6CC79291F31D9A700601DC8 /* DLHamburguerNavigationController.swift in Sources */,
+				A6FBA91A1F503ECD00761124 /* OnboardingViewController3.swift in Sources */,
 				A61204D61F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift in Sources */,
 				A6CC79321F3225F400601DC8 /* SideMenuVC.swift in Sources */,
 			);

@@ -88,12 +88,15 @@ extension RegistrationController {
     
     func handleLogin() {
         
-        let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
-        let contentController = UINavigationController(rootViewController: homeController)
-        let menuVC = SideMenuVC(collectionViewLayout: UICollectionViewFlowLayout())
-        let rootViewController = RootVC(contentViewController: contentController, menuViewController: menuVC)
+        let onboardingPageController = OnboardingPageController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        present(onboardingPageController, animated: false, completion: nil)
         
-        present(rootViewController, animated: false, completion: nil)
+//        let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
+//        let contentController = UINavigationController(rootViewController: homeController)
+//        let menuVC = SideMenuVC(collectionViewLayout: UICollectionViewFlowLayout())
+//        let rootViewController = RootVC(contentViewController: contentController, menuViewController: menuVC)
+//        
+//        present(rootViewController, animated: false, completion: nil)
         
         
     }

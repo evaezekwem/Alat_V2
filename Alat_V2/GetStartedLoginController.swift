@@ -157,9 +157,8 @@ class GetStartedLoginController: UIViewController {
     
     func handleStart() {
         let registrationController = RegistrationController()
-        
         present(registrationController, animated: true, completion: nil)
-        
+       
     }
     
     func setupBackgroundImageView() {
