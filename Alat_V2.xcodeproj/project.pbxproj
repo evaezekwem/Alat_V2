@@ -10,6 +10,7 @@
 		A61204D61F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61204D51F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift */; };
 		A61204D81F2FFC4500221B77 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61204D71F2FFC4500221B77 /* LoginController.swift */; };
 		A625E9D21F2E693900E89313 /* FundAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A625E9D11F2E693900E89313 /* FundAccountController.swift */; };
+		A639A44D1F6034AF00850F15 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A639A44C1F6034AF00850F15 /* README.md */; };
 		A6520CFD1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */; };
 		A69563FC1F28CDB300D312BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69563FB1F28CDB300D312BA /* AppDelegate.swift */; };
 		A69563FE1F28CDB300D312BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69563FD1F28CDB300D312BA /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		A61204D51F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountOverview+setups+handlers.swift"; sourceTree = "<group>"; };
 		A61204D71F2FFC4500221B77 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A625E9D11F2E693900E89313 /* FundAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundAccountController.swift; sourceTree = "<group>"; };
+		A639A44C1F6034AF00850F15 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A6520CFC1F2BAF8F00D62E09 /* RegistrationController+Setups+Handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationController+Setups+Handlers.swift"; sourceTree = "<group>"; };
 		A69563F81F28CDB300D312BA /* Alat_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alat_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69563FB1F28CDB300D312BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		A69563EF1F28CDB300D312BA = {
 			isa = PBXGroup;
 			children = (
+				A639A44C1F6034AF00850F15 /* README.md */,
 				A69563FA1F28CDB300D312BA /* Alat_V2 */,
 				A69563F91F28CDB300D312BA /* Products */,
 			);
@@ -252,6 +255,7 @@
 				A6A9EAAC1F3B5ACB00BBFFF4 /* TransferMoneyController.swift in Sources */,
 				A6CC79331F3225F400601DC8 /* RootVC.swift in Sources */,
 				A6CC792E1F31DB8300601DC8 /* DLHamburguerContainerViewController.swift in Sources */,
+				A639A44D1F6034AF00850F15 /* README.md in Sources */,
 				A6FBA9161F503E7B00761124 /* OnboardingViewController1.swift in Sources */,
 				A6A9EAA61F3AC35E00BBFFF4 /* HomePageController.swift in Sources */,
 				A6CC792C1F31DA5B00601DC8 /* DLHamburguerViewController.swift in Sources */,
