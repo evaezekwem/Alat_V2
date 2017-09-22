@@ -49,7 +49,7 @@ class GetStartedLoginController: UIViewController {
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = "Let's get started..."
         text.font = UIFont.systemFont(ofSize: 38)
-        
+//        text.isScrollEnabled = false
         text.isEditable = false
         text.backgroundColor = nil
         text.textColor = .white
@@ -196,7 +196,7 @@ class GetStartedLoginController: UIViewController {
         titleLabelText.leftAnchor.constraint(equalTo: textAndButtonContainer.leftAnchor).isActive = true
         titleLabelText.topAnchor.constraint(equalTo: textAndButtonContainer.topAnchor).isActive = true
         titleLabelText.widthAnchor.constraint(equalTo: textAndButtonContainer.widthAnchor).isActive = true
-        titleLabelText.heightAnchor.constraint(equalTo: textAndButtonContainer.heightAnchor, multiplier: 1/4).isActive = true
+        titleLabelText.heightAnchor.constraint(equalTo: textAndButtonContainer.heightAnchor, multiplier: 1/3).isActive = true
         
     }
     
@@ -204,7 +204,7 @@ class GetStartedLoginController: UIViewController {
         descriptionText.leftAnchor.constraint(equalTo: textAndButtonContainer.leftAnchor).isActive = true
         descriptionText.topAnchor.constraint(equalTo: titleLabelText.bottomAnchor, constant: 20).isActive = true
         descriptionText.widthAnchor.constraint(equalTo: textAndButtonContainer.widthAnchor).isActive = true
-        descriptionText.heightAnchor.constraint(equalTo: textAndButtonContainer.heightAnchor, multiplier: 1/4).isActive = true
+        descriptionText.heightAnchor.constraint(equalTo: textAndButtonContainer.heightAnchor, multiplier: 1/3).isActive = true
     }
     
     func setupCountryCodeTextView() {

@@ -28,6 +28,8 @@ class OnboardingViewController3: UIViewController {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.font = .systemFont(ofSize: 16)
         textView.textAlignment = .center
+        textView.isEditable = false
+        textView.isSelectable = false
         textView.textColor = textAndBackgroundLightRed
         textView.text = "Get cool points whenever you refer your friends"
         return textView

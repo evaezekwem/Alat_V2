@@ -28,6 +28,8 @@ class OnboardingViewController2: UIViewController {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.font = .systemFont(ofSize: 16)
         textView.textAlignment = .center
+        textView.isEditable = false
+        textView.isSelectable = false
         textView.textColor = textAndBackgroundLightRed
         textView.text = "Request & activate your debit card on your mobile for free"
         return textView

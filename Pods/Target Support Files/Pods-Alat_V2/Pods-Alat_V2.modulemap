@@ -1,0 +1,6 @@
+framework module Pods_Alat_V2 {
+  umbrella header "Pods-Alat_V2-umbrella.h"
+
+  export *
+  module * { export * }
+}

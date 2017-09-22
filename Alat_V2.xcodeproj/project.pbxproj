@@ -39,9 +39,13 @@
 		A6FBA9181F503E9C00761124 /* OnboardingViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBA9171F503E9C00761124 /* OnboardingViewController2.swift */; };
 		A6FBA91A1F503ECD00761124 /* OnboardingViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBA9191F503ECC00761124 /* OnboardingViewController3.swift */; };
 		A6FBA91C1F505CBF00761124 /* OnboardingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBA91B1F505CBF00761124 /* OnboardingPageController.swift */; };
+		B1B4617A33A96AF0D7F4C548 /* Pods_Alat_V2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E900DA5E59BBD01F8AFAF33 /* Pods_Alat_V2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E900DA5E59BBD01F8AFAF33 /* Pods_Alat_V2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alat_V2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34DA87092577217997DA9179 /* Pods-Alat_V2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alat_V2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alat_V2/Pods-Alat_V2.debug.xcconfig"; sourceTree = "<group>"; };
+		4596D453AA5FE8A719BE1E37 /* Pods-Alat_V2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alat_V2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alat_V2/Pods-Alat_V2.release.xcconfig"; sourceTree = "<group>"; };
 		A61204D51F2FB9CC00221B77 /* AccountOverview+setups+handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountOverview+setups+handlers.swift"; sourceTree = "<group>"; };
 		A61204D71F2FFC4500221B77 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A625E9D11F2E693900E89313 /* FundAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundAccountController.swift; sourceTree = "<group>"; };
@@ -83,12 +87,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B4617A33A96AF0D7F4C548 /* Pods_Alat_V2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3F0CAF11D9143C04EC06BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34DA87092577217997DA9179 /* Pods-Alat_V2.debug.xcconfig */,
+				4596D453AA5FE8A719BE1E37 /* Pods-Alat_V2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		94A983566C6C222D236ECF28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E900DA5E59BBD01F8AFAF33 /* Pods_Alat_V2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A625E9D31F2E722E00E89313 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +128,8 @@
 				A639A44C1F6034AF00850F15 /* README.md */,
 				A69563FA1F28CDB300D312BA /* Alat_V2 */,
 				A69563F91F28CDB300D312BA /* Products */,
+				0D3F0CAF11D9143C04EC06BC /* Pods */,
+				94A983566C6C222D236ECF28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A695640A1F28CDB300D312BA /* Build configuration list for PBXNativeTarget "Alat_V2" */;
 			buildPhases = (
+				4880E8DDFDF027B8530BE602 /* [CP] Check Pods Manifest.lock */,
 				A69563F41F28CDB300D312BA /* Sources */,
 				A69563F51F28CDB300D312BA /* Frameworks */,
 				A69563F61F28CDB300D312BA /* Resources */,
+				4AE61D09BC5E11E50EC507D8 /* [CP] Embed Pods Frameworks */,
+				B71F733DDD2E45DE8D4F736E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +263,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4880E8DDFDF027B8530BE602 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4AE61D09BC5E11E50EC507D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alat_V2/Pods-Alat_V2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B71F733DDD2E45DE8D4F736E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alat_V2/Pods-Alat_V2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A69563F41F28CDB300D312BA /* Sources */ = {
@@ -374,10 +449,12 @@
 		};
 		A695640B1F28CDB300D312BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DA87092577217997DA9179 /* Pods-Alat_V2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UY35CPB83H;
 				INFOPLIST_FILE = Alat_V2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eva.Eva.Alat-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -387,10 +464,12 @@
 		};
 		A695640C1F28CDB300D312BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4596D453AA5FE8A719BE1E37 /* Pods-Alat_V2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UY35CPB83H;
 				INFOPLIST_FILE = Alat_V2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eva.Eva.Alat-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";

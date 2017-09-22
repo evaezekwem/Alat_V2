@@ -29,6 +29,8 @@ class OnboardingViewController1: UIViewController {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.font = .systemFont(ofSize: 16)
         textView.textAlignment = .center
+        textView.isEditable = false
+        textView.isSelectable = false
         textView.textColor = textAndBackgroundLightRed
         textView.text = "Set up an account anywhere you are in 5 minutes"
         return textView
