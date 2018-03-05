@@ -2,7 +2,7 @@
 //  SideMenuVC.swift
 //  Zone
 //
-//  Created by Zone 3 on 6/22/17.
+//  Created by Zone 3 on 6/22/17. Reviewed on 5th March 2018
 //  Copyright © 2017 Zone 3. All rights reserved.
 //
 
